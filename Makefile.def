@@ -34,7 +34,7 @@ SHELL:=/bin/bash
 # Default compilation flags
 #CFLAGS?=-O0 --debug
 CFLAGS?=-O3
-CFLAGS+=-Wall -fPIC -std=c99
+CFLAGS+=-Wall -fPIC -std=gnu99
 CPPFLAGS+=-D_GNU_SOURCE
 
 # To turn on debug message logging
