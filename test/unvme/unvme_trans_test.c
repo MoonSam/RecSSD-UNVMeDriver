@@ -223,7 +223,7 @@ static void* read_thread_ndp(void* arg)
     *(trans_config_t*)(buf + chunkoff * ns->blocksize * nlbToRead) = *config;
     int err = unvme_translate_region(ns, q,
         buf + chunkoff * ns->blocksize * nlbToRead,
-        slba + chunkoff * ns->blocksize, nlbToRead);
+        slba + chunkoff * ns->blocksize, nlb, nlbToRead);
     if (err) errx(1, "translate");
   }
 
